@@ -104,6 +104,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/dermakonsepestetika/WorkingSpace/Project/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/dermakonsepestetika/WorkingSpace/Project/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
       "packageUri": "lib/",
@@ -114,6 +120,12 @@
       "rootUri": "file:///Users/dermakonsepestetika/WorkingSpace/Project/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/dermakonsepestetika/WorkingSpace/Project/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "sky_engine",
@@ -176,7 +188,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-06-03T03:53:05.575828Z",
+  "generated": "2022-06-03T06:33:29.177862Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
