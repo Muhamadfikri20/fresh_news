@@ -17,6 +17,20 @@ class _NewsListPageState extends State<NewsListPage> {
     Provider.of<NewsArticleListViewModel>(context, listen: false).populateTopHeadlines();
   }
 
+  Widget _buildList(BuildContext context, NewsArticleListViewModel vm) {
+    switch (vm.loadingStatus) {
+      case LoadingStatus.searching:
+        return Align(child: CircularProgressIndicator());
+      case LoadingStatus.empty:
+        return Align(child: Text("No results found!"));
+      case LoadingStatus.completed:
+        return Expanded(
+            child: NewsList(
+          articles: vm.articles,
+        ));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final vm = Provider.of<NewsArticleListViewModel>(context);
@@ -27,6 +41,9 @@ class _NewsListPageState extends State<NewsListPage> {
           TextField(
             controller: _controller,
             onSubmitted: (value) {
+              setState(() {
+                vm.loadingStatus = LoadingStatus.searching;
+              });
               // fetch all the news related to the keyword
               if (value.isNotEmpty) {
                 vm.search(value);
@@ -45,7 +62,7 @@ class _NewsListPageState extends State<NewsListPage> {
                   },
                 )),
           ),
-          Expanded(child: NewsList(articles: vm.articles))
+          _buildList(context, vm)
         ]));
   }
 }
