@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fresh_news/pages/newsArticleDetailsPage.dart';
 import 'package:fresh_news/viewmodels/newsArticleListViewModel.dart';
+import 'package:fresh_news/viewmodels/newsArticleViewModel.dart';
 import 'package:fresh_news/widgets/newsList.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +29,7 @@ class _NewsListPageState extends State<NewsListPage> {
         return Expanded(
             child: NewsList(
           articles: vm.articles,
+          onSelected: (article) {},
         ));
     }
   }
