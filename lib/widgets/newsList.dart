@@ -6,9 +6,6 @@ class NewsList extends StatelessWidget {
   final List<NewsArticleViewModel> articles;
   final Function(NewsArticleViewModel article) onSelected;
   NewsList({required this.articles, required this.onSelected});
-  void _showNewsArticleDetails(BuildContext context, NewsArticleViewModel article) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticleDetailsPage(article: article)));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +16,7 @@ class NewsList extends StatelessWidget {
 
         return ListTile(
           onTap: () {
-            _showNewsArticleDetails(context, article);
+            this.onSelected(article);
           },
           leading: Container(width: 100, height: 100, child: article.imageURL == null ? Image.asset("images/news-placeholder.png") : Image.network(article.imageURL)),
           title: Text(article.title),

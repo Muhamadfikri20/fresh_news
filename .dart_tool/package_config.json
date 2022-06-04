@@ -182,13 +182,19 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "webview_flutter",
+      "rootUri": "file:///Users/dermakonsepestetika/WorkingSpace/Project/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-0.3.24",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "fresh_news",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-06-04T04:59:22.415446Z",
+  "generated": "2022-06-04T05:04:49.901525Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

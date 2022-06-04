@@ -19,6 +19,10 @@ class _NewsListPageState extends State<NewsListPage> {
     Provider.of<NewsArticleListViewModel>(context, listen: false).populateTopHeadlines();
   }
 
+  void _showNewsArticleDetails(BuildContext context, NewsArticleViewModel article) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticleDetailsPage(article: article)));
+  }
+
   Widget _buildList(BuildContext context, NewsArticleListViewModel vm) {
     switch (vm.loadingStatus) {
       case LoadingStatus.searching:
@@ -29,7 +33,9 @@ class _NewsListPageState extends State<NewsListPage> {
         return Expanded(
             child: NewsList(
           articles: vm.articles,
-          onSelected: (article) {},
+          onSelected: (article) {
+            _showNewsArticleDetails(context, article);
+          },
         ));
     }
   }
